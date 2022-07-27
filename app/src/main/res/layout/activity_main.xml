@@ -25,7 +25,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="choose: " />
+                android:text="choose: "
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -101,8 +102,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="05dp"
                 android:text="Choose your own angles and lenghts: "
-                android:layout_margin="05dp" />
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -229,11 +231,9 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btnInjection"
                     android:layout_width="184dp"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="85dp"
-                    android:onClick="launchInjectionDialog"
                     android:text="DRAW" />
 
             </LinearLayout>
