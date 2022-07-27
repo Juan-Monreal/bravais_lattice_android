@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="linearlayout_form_txt">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginBottom">2dp</item>
+    </style>
+
+    <style name="linearlayout_form_spinner">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">3</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="form_spinner">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="textview_form">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="edittext_form">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@color/light</item>
+        <item name="android:inputType">number</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:textAlignment">textEnd</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="textview_label_title">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="textview_form_label">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="textview">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="textview_about_title" parent="@style/textview">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/purple_700</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="textview_about_name" parent="@style/textview">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+
+
+</resources>
