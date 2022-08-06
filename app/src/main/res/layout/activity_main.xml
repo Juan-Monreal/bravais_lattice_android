@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:layout_margin="20dp">
 
 
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:layout_width="match_parent"
@@ -32,50 +35,59 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:layout_weight="0"
+                android:layout_weight="2"
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="31dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="System" />
 
                     <Spinner
-                        android:id="@+id/sp_System"
+                        android:layout_weight="1"
+                        android:id="@+id/sp_system"
                         android:layout_width="match_parent"
-                        android:layout_height="45dp" />
+                        android:layout_height="wrap_content" />
+
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="31dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="Subsystems: " />
 
                     <Spinner
-                        android:id="@+id/sp_Subsystem"
+                        android:layout_weight="1"
+                        android:id="@+id/sp_subsystem"
                         android:layout_width="match_parent"
-                        android:layout_height="45dp" />
+                        android:layout_height="wrap_content" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="2"
                     android:orientation="vertical">
 
                     <TextView
-
-                        android:layout_width="326dp"
-                        android:layout_height="41dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
                         android:text="properties:"
@@ -83,8 +95,10 @@
                         android:textColor="@color/black" />
 
                     <TextView
-                        android:layout_width="332dp"
-                        android:layout_height="62dp"
+                        android:id="@+id/tv_properties"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:textColor="@color/black"
                         android:background="@drawable/rec_border"/>
@@ -156,6 +170,7 @@
                     style="@style/linearlayout_form_txt">
 
                     <EditText
+                        android:id="@+id/et_a"
                         android:layout_weight="0.6"
                         android:maxLength="4"
                         style="@style/edittext_form"
@@ -163,11 +178,13 @@
                         android:layout_gravity="center"/>
 
                     <EditText
+                        android:id="@+id/et_b"
                         style="@style/edittext_form"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center" />
 
                     <EditText
+                        android:id="@+id/et_c"
                         style="@style/edittext_form"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center" />
@@ -202,6 +219,7 @@
                     style="@style/linearlayout_form_txt">
 
                     <EditText
+                        android:id="@+id/et_alpha"
                         android:layout_weight="0.6"
                         android:maxLength="4"
                         style="@style/edittext_form"
@@ -209,11 +227,13 @@
                         android:layout_gravity="center" />
 
                     <EditText
+                        android:id="@+id/et_beta"
                         style="@style/edittext_form"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center" />
 
                     <EditText
+                        android:id="@+id/et_gamma"
                         style="@style/edittext_form"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"/>
@@ -225,13 +245,15 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_margin="10dp"
                 android:orientation="horizontal">
 
                 <Button
-                    android:layout_width="184dp"
+                    android:id="@+id/btn_draw"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="85dp"
                     android:text="DRAW" />
