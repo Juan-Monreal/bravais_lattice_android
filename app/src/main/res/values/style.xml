@@ -75,6 +75,12 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <style name="textview_about_description" parent="@style/textview">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:text">@string/str_description</item>
+    </style>
+
 
 
 
