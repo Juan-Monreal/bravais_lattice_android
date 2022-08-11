@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="5dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="05dp"
+        android:text="Choose your own angles and lenghts: "
+        android:textStyle="bold" />
+
+    <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        style="@style/linearlayout_form_txt"
+                        android:layout_height="20dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:text=""
+                            style="@style/textview_form"/>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/linearlayout_form_txt">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:text="length a "
+                            style="@style/textview_form"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="length b"
+                            style="@style/textview_form"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="length c"
+                            style="@style/textview_form"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/linearlayout_form_txt">
+
+                        <EditText
+                            android:id="@+id/et_a"
+                            android:layout_weight="0.6"
+                            android:maxLength="4"
+                            style="@style/edittext_form"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"/>
+
+                        <EditText
+                            android:id="@+id/et_b"
+                            style="@style/edittext_form"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center" />
+
+                        <EditText
+                            android:id="@+id/et_c"
+                            style="@style/edittext_form"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/linearlayout_form_txt">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:text="Alpha"
+                            style="@style/textview_form"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Beta"
+                            style="@style/textview_form"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Gamma"
+                            style="@style/textview_form"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/linearlayout_form_txt">
+
+                        <EditText
+                            android:id="@+id/et_alpha"
+                            android:layout_weight="0.6"
+                            android:maxLength="4"
+                            style="@style/edittext_form"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center" />
+
+                        <EditText
+                            android:id="@+id/et_beta"
+                            style="@style/edittext_form"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center" />
+
+                        <EditText
+                            android:id="@+id/et_gamma"
+                            style="@style/edittext_form"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/customOk"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.50"
+            android:text="@string/text_ok"
+            android:textSize="14sp"
+            android:drawableStart="@drawable/ic_ok"
+            android:backgroundTint="@color/green"
+            android:layout_marginHorizontal="10dp" />
+
+        <Button
+            android:id="@+id/customCancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.50"
+            android:text="@string/text_cancel"
+            android:textSize="14sp"
+            android:drawableStart="@drawable/ic_cancel"
+            android:backgroundTint="@color/green"
+            android:layout_marginHorizontal="10dp"/>
+
+    </LinearLayout>
+</LinearLayout>
