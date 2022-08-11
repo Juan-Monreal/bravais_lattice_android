@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/projects/androidProjects/iti27849u3_equipo_01/app/src/main/res/drawable/rec_border.xml" value="0.1805" />
+        <entry key="..\:/projects/androidProjects/iti27849u3_equipo_01/app/src/main/res/drawable/round_button.xml" value="0.196" />
         <entry key="..\:/projects/androidProjects/iti27849u3_equipo_01/app/src/main/res/layout/activity_about.xml" value="0.2916666666666667" />
-        <entry key="..\:/projects/androidProjects/iti27849u3_equipo_01/app/src/main/res/layout/activity_main.xml" value="0.2898550724637681" />
+        <entry key="..\:/projects/androidProjects/iti27849u3_equipo_01/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/projects/androidProjects/iti27849u3_equipo_01/app/src/main/res/menu/menu_main.xml" value="0.365625" />
       </map>
     </option>
   </component>

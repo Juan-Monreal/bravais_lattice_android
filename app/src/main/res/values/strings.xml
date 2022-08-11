@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">iti-27849-u3_equipo_01</string>
+    <string name="str_label_top">Bravais Lattices</string>
     <string name="str_description">Student of Engineering in Information Technology</string>
+    <string name="str_about">About us</string>
+    <string name="text_ok">Ok</string>
+    <string name="text_cancel">Cancel</string>
 </resources>
