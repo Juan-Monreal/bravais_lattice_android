@@ -14,9 +14,12 @@
         android:theme="@style/Theme.Iti27849u3_equipo_01"
         tools:targetApi="31">
         <activity
+            android:name=".OpenGLActivity"
+            android:exported="false" />
+        <activity
             android:name=".AboutActivity"
             android:exported="true"
-            android:label="@string/str_about"/>
+            android:label="@string/str_about" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

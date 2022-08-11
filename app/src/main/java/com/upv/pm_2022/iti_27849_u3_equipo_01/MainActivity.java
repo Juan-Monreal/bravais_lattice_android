@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.graphics.Point;
+import android.opengl.GLSurfaceView;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -135,7 +138,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void draw(View view){
         //TODO: Launch OpenGL View
-        Intent intent;
+        Intent intent = new Intent(this, OpenGLActivity.class);
+        startActivity(intent);
     }
 
     private String showProperties(String name){
