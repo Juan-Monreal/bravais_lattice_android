@@ -25,12 +25,17 @@ import java.util.Arrays;
 public class MainActivity extends AppCompatActivity {
     //TODO: Do the same for the others systems
     static String[] systems;
-    static String[] cubic, tetragonal;
+    static String[] cubic, tetragonal, ortorrombica, hexagonal, trigonal, monoclinica, triclinica;
 
     static {
-        systems = new String[]{"Cubic", "Tetragonal"};
+        systems = new String[]{"Cubic", "Tetragonal", "ortorrombica", "hexagonal", "trigonal", "monoclinica", "triclinica"};
         cubic = new String[] {"Cubic P", "Cubic I", "Cubic F"};
         tetragonal = new String[] {"Tetragonal P", "Tetragonal I"};
+        ortorrombica = new String[] {"Ortorrombica P", "Ortorrombica I,", "Ortorrombica C", "Ortorrombica F"};
+        hexagonal = new String[] {"Hexagonal P"};
+        trigonal = new String[] {"Trigonal P"};
+        monoclinica = new String[] {"Monoclinica P","Monoclinica C"};
+        triclinica = new String[] {"Triclinica"};
     }
 
     private Toolbar toolbar;
