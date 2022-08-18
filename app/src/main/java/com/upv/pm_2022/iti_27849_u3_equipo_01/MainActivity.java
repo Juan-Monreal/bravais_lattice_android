@@ -159,6 +159,24 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case "Tetragonal I":
                 break;
+            case "Ortorrombica P":
+                break;
+            case "Ortorrombica I":
+                break;
+            case "Ortorrombica C":
+                break;
+            case "Ortorrombica F":
+                break;
+            case "Hexagonal P":
+                break;
+            case "Trigonal P":
+                break;
+            case "Monoclinica P":
+                break;
+            case "Monoclinica C":
+                break;
+            case "Triclinica":
+                break;
             default:
                 return "";
         }
