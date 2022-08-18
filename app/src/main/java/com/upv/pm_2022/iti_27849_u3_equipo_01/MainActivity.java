@@ -150,32 +150,46 @@ public class MainActivity extends AppCompatActivity {
     private String showProperties(String name){
         switch (name){
             case "Cubic P":
+                tvProperties.setText("a = b ≠ c, a = b = y = 90°u");
                 break;
             case "Cubic I":
+                tvProperties.setText("a = b ≠ c,  a = b = y = 90°u");
                 break;
             case "Cubic F":
+                tvProperties.setText("a = b = c,  a = b = y = 90°u");
                 break;
             case "Tetragonal P":
+                tvProperties.setText("a = b ≠ c,  a = b = y = 90°");
                 break;
             case "Tetragonal I":
+                tvProperties.setText("a = b ≠ c,  a = b = y = 90°");
                 break;
             case "Ortorrombica P":
+                tvProperties.setText("a ≠ b ≠ c,  a = b = y = 90°");
                 break;
             case "Ortorrombica I":
+                tvProperties.setText("a = b ≠ c,  a = b = y = 90°");
                 break;
             case "Ortorrombica C":
+                tvProperties.setText("a ≠ b ≠ c,  a = b = y = 90°");
                 break;
             case "Ortorrombica F":
+                tvProperties.setText("a ≠ b ≠ c,  a = b = y = 90°");
                 break;
             case "Hexagonal P":
+                tvProperties.setText("a = b ≠ c,  a = b = 90°, y = 120°");
                 break;
             case "Trigonal P":
+                tvProperties.setText("a = b = c,  a = b = y ≠ 90°");
                 break;
             case "Monoclinica P":
+                tvProperties.setText("a ≠ b ≠ c,  a = b = 90°, y ≠ 120°");
                 break;
             case "Monoclinica C":
+                tvProperties.setText("a ≠ b ≠ c,  a = b = 90°, y ≠ 120°");
                 break;
             case "Triclinica":
+                tvProperties.setText("a ≠ b ≠ c,  a ≠ b ≠ 90°, y ≠ 120°");
                 break;
             default:
                 return "";
