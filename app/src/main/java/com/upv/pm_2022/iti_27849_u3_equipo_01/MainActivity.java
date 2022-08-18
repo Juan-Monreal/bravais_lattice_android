@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     static String[] cubic, tetragonal, ortorrombica, hexagonal, trigonal, monoclinica, triclinica;
 
     static {
-        systems = new String[]{"Cubic", "Tetragonal", "ortorrombica", "hexagonal", "trigonal", "monoclinica", "triclinica"};
+        systems = new String[]{"Cubic", "Tetragonal", "Ortorrombica", "Hexagonal", "Trigonal", "Monoclinica", "Triclinica"};
         cubic = new String[] {"Cubic P", "Cubic I", "Cubic F"};
         tetragonal = new String[] {"Tetragonal P", "Tetragonal I"};
         ortorrombica = new String[] {"Ortorrombica P", "Ortorrombica I,", "Ortorrombica C", "Ortorrombica F"};
@@ -97,6 +97,41 @@ public class MainActivity extends AppCompatActivity {
                                 new ArrayList<>(Arrays.asList(MainActivity.tetragonal))
                         );
                         break;
+                    case 2:
+                        subsystemAdapter = new ArrayAdapter<>(
+                                parent.getContext(),
+                                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,
+                                new ArrayList<>(Arrays.asList(MainActivity.ortorrombica))
+                        );
+                        break;
+                    case 3:
+                        subsystemAdapter = new ArrayAdapter<>(
+                                parent.getContext(),
+                                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,
+                                new ArrayList<>(Arrays.asList(MainActivity.hexagonal))
+                        );
+                        break;
+                    case 4:
+                        subsystemAdapter = new ArrayAdapter<>(
+                                parent.getContext(),
+                                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,
+                                new ArrayList<>(Arrays.asList(MainActivity.trigonal))
+                        );
+                        break;
+                    case 5:
+                        subsystemAdapter = new ArrayAdapter<>(
+                                parent.getContext(),
+                                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,
+                                new ArrayList<>(Arrays.asList(MainActivity.monoclinica))
+                        );
+                        break;
+                    case 6:
+                        subsystemAdapter = new ArrayAdapter<>(
+                                parent.getContext(),
+                                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,
+                                new ArrayList<>(Arrays.asList(MainActivity.triclinica))
+                        );
+                        break;
                 }
                 spSubsystem.setAdapter(subsystemAdapter);
             }
@@ -111,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 tvProperties.setText(showProperties(parent.getSelectedItem().toString()));
+                System.out.println(parent.getSelectedItem().toString());
             }
 
             @Override
@@ -150,50 +186,48 @@ public class MainActivity extends AppCompatActivity {
     private String showProperties(String name){
         switch (name){
             case "Cubic P":
-                tvProperties.setText("a = b ≠ c, a = b = y = 90°u");
-                break;
+                return ("a = b = y = 90°u");
+
             case "Cubic I":
-                tvProperties.setText("a = b ≠ c,  a = b = y = 90°u");
-                break;
+                return ("a = b ≠ c,  a = b = y = 90°u");
+
             case "Cubic F":
-                tvProperties.setText("a = b = c,  a = b = y = 90°u");
-                break;
+                return ("a = b = c,  a = b = y = 90°u");
+
             case "Tetragonal P":
-                tvProperties.setText("a = b ≠ c,  a = b = y = 90°");
-                break;
+                return ("a = b ≠ c,  a = b = y = 90°");
+
             case "Tetragonal I":
-                tvProperties.setText("a = b ≠ c,  a = b = y = 90°");
-                break;
+                return ("a = b ≠ c,  a = b = y = 90°");
+
             case "Ortorrombica P":
-                tvProperties.setText("a ≠ b ≠ c,  a = b = y = 90°");
-                break;
+                return ("a ≠ b ≠ c,  a = b = y = 90°");
+
             case "Ortorrombica I":
-                tvProperties.setText("a = b ≠ c,  a = b = y = 90°");
-                break;
+                return ("a = b ≠ c,  a = b = y = 90°");
+
             case "Ortorrombica C":
-                tvProperties.setText("a ≠ b ≠ c,  a = b = y = 90°");
-                break;
+                return ("a ≠ b ≠ c,  a = b = y = 90°");
+
             case "Ortorrombica F":
-                tvProperties.setText("a ≠ b ≠ c,  a = b = y = 90°");
-                break;
+                return ("a ≠ b ≠ c,  a = b = y = 90°");
+
             case "Hexagonal P":
-                tvProperties.setText("a = b ≠ c,  a = b = 90°, y = 120°");
-                break;
+                return ("a = b ≠ c,  a = b = 90°, y = 120°");
+
             case "Trigonal P":
-                tvProperties.setText("a = b = c,  a = b = y ≠ 90°");
-                break;
+                return ("a = b = c,  a = b = y ≠ 90°");
+
             case "Monoclinica P":
-                tvProperties.setText("a ≠ b ≠ c,  a = b = 90°, y ≠ 120°");
-                break;
+                return ("a ≠ b ≠ c,  a = b = 90°, y ≠ 120°");
+
             case "Monoclinica C":
-                tvProperties.setText("a ≠ b ≠ c,  a = b = 90°, y ≠ 120°");
-                break;
+                return ("a ≠ b ≠ c,  a = b = 90°, y ≠ 120°");
+
             case "Triclinica":
-                tvProperties.setText("a ≠ b ≠ c,  a ≠ b ≠ 90°, y ≠ 120°");
-                break;
+                return ("a ≠ b ≠ c,  a ≠ b ≠ 90°, y ≠ 120°");
             default:
                 return "";
         }
-        return "";
     }
 }
