@@ -5,14 +5,17 @@ import android.graphics.Point;
 import android.opengl.GLSurfaceView;
 import android.view.Display;
 import android.view.MotionEvent;
+import android.view.ScaleGestureDetector;
 import android.view.View;
 
 public class CustomSurfaceView extends GLSurfaceView {
 
     boolean zooming = false;
     private int zoom, width, height;
-    private GLRender renderer;
+    public GLRender renderer;
     private long timeOfLastZoom;
+
+    private float sizeCoef = 1;
 
     public CustomSurfaceView(Context context) {
         super(context);
@@ -22,6 +25,22 @@ public class CustomSurfaceView extends GLSurfaceView {
         zoom = 4;
 
         renderer = new GLRender(zoom);
+        setRenderer(renderer);
+        timeOfLastZoom = System.currentTimeMillis();
+    }
+
+    public CustomSurfaceView(Context context, int width, int height, int options) {
+        super(context);
+        setEGLContextClientVersion(2);
+        setEGLConfigChooser(true);
+        zoom = 4;
+
+        Point size = new Point();
+        this.width = width;
+        this.height = height;
+
+        renderer = new GLRender(options);
+        // Set the renderer to our demo renderer, defined below.
         setRenderer(renderer);
         timeOfLastZoom = System.currentTimeMillis();
     }
@@ -45,29 +64,37 @@ public class CustomSurfaceView extends GLSurfaceView {
 
     @Override
     public boolean onTouchEvent(final MotionEvent event) {
-        //return super.onTouchEvent(event);
-        if (System.currentTimeMillis() - timeOfLastZoom > 250 && !zooming) {
-            //onPause();
-            if (event.getY() > height / 2 && zoom <= 1 || event.getY() <= height / 2 && zoom >= 9)
-                return true;
-            queueEvent(() -> {
-                zooming = true;
-                if (event.getY() > height / 2)
-                    zoom--;
-                else
-                    zoom++;
+        return super.onTouchEvent(event);
+    }
 
-//                    if (zoom < 1)
-//                        zoom = 1;
-//                    else if (zoom > 9)
-//                        zoom = 9;
-                renderer.zoom(zoom);
-                timeOfLastZoom = System.currentTimeMillis();
-                zooming = false;
-            });
+    private class ScaleDetectorListener implements ScaleGestureDetector.OnScaleGestureListener{
 
-            //onResume();
+        float scaleFocusX = 0;
+        float scaleFocusY = 0;
+
+        public boolean onScale(ScaleGestureDetector arg0) {
+            float scale = arg0.getScaleFactor() * sizeCoef;
+
+            sizeCoef = scale;
+
+            requestRender();
+
+            return true;
         }
-        return true;
+
+        public boolean onScaleBegin(ScaleGestureDetector arg0) {
+            invalidate();
+
+            scaleFocusX = arg0.getFocusX();
+            scaleFocusY = arg0.getFocusY();
+
+            return true;
+        }
+
+        public void onScaleEnd(ScaleGestureDetector arg0) {
+            scaleFocusX = 0;
+            scaleFocusY = 0;
+        }
     }
 }
+

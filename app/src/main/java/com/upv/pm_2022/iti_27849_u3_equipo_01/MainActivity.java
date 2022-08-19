@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.graphics.Path;
 import android.graphics.Point;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         systems = new String[]{"Cubic", "Tetragonal", "Ortorrombica", "Hexagonal", "Trigonal", "Monoclinica", "Triclinica"};
         cubic = new String[] {"Cubic P", "Cubic I", "Cubic F"};
         tetragonal = new String[] {"Tetragonal P", "Tetragonal I"};
-        ortorrombica = new String[] {"Ortorrombica P", "Ortorrombica I,", "Ortorrombica C", "Ortorrombica F"};
+        ortorrombica = new String[] {"Ortorrombica P", "Ortorrombica I", "Ortorrombica C", "Ortorrombica F"};
         hexagonal = new String[] {"Hexagonal P"};
         trigonal = new String[] {"Trigonal P"};
         monoclinica = new String[] {"Monoclinica P","Monoclinica C"};
@@ -186,45 +187,59 @@ public class MainActivity extends AppCompatActivity {
     private String showProperties(String name){
         switch (name){
             case "Cubic P":
+                OpenGLActivity.selected = "Cubic P";
                 return ("a = b = y = 90°u");
 
             case "Cubic I":
+                OpenGLActivity.selected = "Cubic I";
                 return ("a = b ≠ c,  a = b = y = 90°u");
 
             case "Cubic F":
+                OpenGLActivity.selected = "Cubic F";
                 return ("a = b = c,  a = b = y = 90°u");
 
             case "Tetragonal P":
+                OpenGLActivity.selected = "Tetragonal P";
                 return ("a = b ≠ c,  a = b = y = 90°");
 
             case "Tetragonal I":
+                OpenGLActivity.selected = "Tetragonal I";
                 return ("a = b ≠ c,  a = b = y = 90°");
 
             case "Ortorrombica P":
+                OpenGLActivity.selected = "Ortorrombica P";
                 return ("a ≠ b ≠ c,  a = b = y = 90°");
 
             case "Ortorrombica I":
+                OpenGLActivity.selected = "Ortorrombica I";
                 return ("a = b ≠ c,  a = b = y = 90°");
 
             case "Ortorrombica C":
+                OpenGLActivity.selected = "Ortorrombica C";
                 return ("a ≠ b ≠ c,  a = b = y = 90°");
 
             case "Ortorrombica F":
+                OpenGLActivity.selected = "Ortorrombica F";
                 return ("a ≠ b ≠ c,  a = b = y = 90°");
 
             case "Hexagonal P":
+                OpenGLActivity.selected = "Hexagonal P";
                 return ("a = b ≠ c,  a = b = 90°, y = 120°");
 
             case "Trigonal P":
+                OpenGLActivity.selected = "Trigonal P";
                 return ("a = b = c,  a = b = y ≠ 90°");
 
             case "Monoclinica P":
+                OpenGLActivity.selected = "Monoclinica P";
                 return ("a ≠ b ≠ c,  a = b = 90°, y ≠ 120°");
 
             case "Monoclinica C":
+                OpenGLActivity.selected = "Monoclinica C";
                 return ("a ≠ b ≠ c,  a = b = 90°, y ≠ 120°");
 
             case "Triclinica":
+                OpenGLActivity.selected = "Triclinica";
                 return ("a ≠ b ≠ c,  a ≠ b ≠ 90°, y ≠ 120°");
             default:
                 return "";
