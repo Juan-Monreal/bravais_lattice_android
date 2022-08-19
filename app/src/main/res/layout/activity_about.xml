@@ -33,6 +33,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.7"
+                android:src="@drawable/andrea"
                  />
 
             <LinearLayout
@@ -135,6 +136,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.7"
+                android:src="@drawable/edgar"
                  />
 
             <LinearLayout
@@ -147,7 +149,7 @@
                 <!-- android:id="@+id/tv_programmer_name" -->
                 <TextView
                     style="@style/textview_about_name"
-                    android:text="NAME"/>
+                    android:text="Edgar Uriel Ramos Ramirez"/>
 
                 <!-- android:id="@+id/tv_about_programmer" -->
                 <TextView
