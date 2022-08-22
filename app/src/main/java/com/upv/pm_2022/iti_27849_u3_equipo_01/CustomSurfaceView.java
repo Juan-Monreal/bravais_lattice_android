@@ -33,7 +33,7 @@ public class CustomSurfaceView extends GLSurfaceView {
         super(context);
         setEGLContextClientVersion(2);
         setEGLConfigChooser(true);
-        zoom = 4;
+        zoom = 1;
 
         Point size = new Point();
         this.width = width;
