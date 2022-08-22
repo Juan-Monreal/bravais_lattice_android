@@ -160,8 +160,8 @@ public class GLRender implements GLSurfaceView.Renderer {
                 -0.01f, 0.01f, -0.01f,
                 -0.01f, -0.01f, 0.01f,
                 0.01f, -0.01f, 0.01f,
-                0.01f, width, width,
-                -0.01f, width, width
+                0.01f, 0.01f, 0.01f,
+                -0.01f, 0.01f, width
         });
     }
 
