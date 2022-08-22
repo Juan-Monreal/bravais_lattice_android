@@ -40,7 +40,7 @@ public class OpenGLActivity extends AppCompatActivity {
         btnChange.setBackgroundColor(Color.parseColor("#00BCD4"));
 
         customSurfaceView = drawCustomBravais(selected);
-
+        customSurfaceView.invalidate();
         primaryLayout.addView(btnChange, 0);
         primaryLayout.addView(customSurfaceView, 1);
     }
@@ -102,7 +102,7 @@ public class OpenGLActivity extends AppCompatActivity {
                 return  new CustomSurfaceView(this, size.x, size.y, 11);
 
             case "Cubic F":
-                return  new CustomSurfaceView(this, size.x, size.y, 1);
+                return  new CustomSurfaceView(this, size.x, size.y, 12);
 
             case "Tetragonal P":
                 return  new CustomSurfaceView(this, size.x, size.y, 6);

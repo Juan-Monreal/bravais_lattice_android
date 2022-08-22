@@ -353,7 +353,112 @@ public class GLRender implements GLSurfaceView.Renderer {
             Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, 0.5f);
             mSphere = new Sphere(10,10,0.05f,1.0f);
             mSphere.draw(mFinalMVPMatrix);
-        } else if (OPTIONS == 2){//monoclínico
+
+            //centro
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.25f, -0.25f, -0.25f);
+            mSphere = new Sphere(10,10,0.05f,1.0f);
+            mSphere.draw(mFinalMVPMatrix);
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, 0.0f);
+
+        } else if (OPTIONS == 12){//cúbico centrado en las caras
+            //Vertical lines
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, 0.0f);
+            left_line = getVerticalLine(0.5f);
+            left_line.draw(mFinalMVPMatrix);
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, 0.5f);
+            left_line_behind = getVerticalLine(0.5f);
+            left_line_behind.draw(mFinalMVPMatrix);
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.5f, 0.0f, 0.0f);
+            right_line = getVerticalLine(0.5f);
+            right_line.draw(mFinalMVPMatrix);
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, -0.5f);
+            right_line_behind = getVerticalLine(0.5f);
+            right_line_behind.draw(mFinalMVPMatrix);
+
+            //Horizontal lines
+            Matrix.translateM(mFinalMVPMatrix, 0, -0.25f, -0.25f, 0.0f);
+            bottom_line = getHorizontalLine(0.5f);
+            bottom_line.draw(mFinalMVPMatrix);
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, 0.5f);
+            bottom_line_behind = getHorizontalLine(0.5f);
+            bottom_line_behind.draw(mFinalMVPMatrix);
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.5f, 0.0f);
+            top_line = getHorizontalLine(0.5f);
+            top_line.draw(mFinalMVPMatrix);
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, -0.5f);
+            top_line_behind = getHorizontalLine(0.5f);
+            top_line_behind.draw(mFinalMVPMatrix);
+
+            //Depth Lines
+            Matrix.translateM(mFinalMVPMatrix, 0, -0.25f, 0.0f, 0.25f);
+            bottom_left_line = getDepthLine(0.5f);
+            bottom_left_line.draw(mFinalMVPMatrix);
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.5f, 0.0f, 0.0f);
+            bottom_right_line = getDepthLine(0.5f);
+            bottom_right_line.draw(mFinalMVPMatrix);
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, -0.5f, 0.0f);
+            top_left_line = getDepthLine(0.5f);
+            top_left_line.draw(mFinalMVPMatrix);
+            Matrix.translateM(mFinalMVPMatrix, 0, -0.5f, 0.0f, 0.0f);
+            top_right_line = getDepthLine(0.5f);
+            top_right_line.draw(mFinalMVPMatrix);
+
+            //arriba
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, 0.25f);
+            mSphere = new Sphere(10,10,0.05f,1.0f);
+            mSphere.draw(mFinalMVPMatrix);
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, -0.5f);
+            mSphere = new Sphere(10,10,0.05f,1.0f);
+            mSphere.draw(mFinalMVPMatrix);
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.5f, 0.0f, 0.0f);
+            mSphere = new Sphere(10,10,0.05f,1.0f);
+            mSphere.draw(mFinalMVPMatrix);
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, 0.5f);
+            mSphere = new Sphere(10,10,0.05f,1.0f);
+            mSphere.draw(mFinalMVPMatrix);
+
+            //abajo
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.5f, 0.0f);
+            mSphere = new Sphere(10,10,0.05f,1.0f);
+            mSphere.draw(mFinalMVPMatrix);
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, -0.5f);
+            mSphere = new Sphere(10,10,0.05f,1.0f);
+            mSphere.draw(mFinalMVPMatrix);
+            Matrix.translateM(mFinalMVPMatrix, 0, -0.5f, 0.0f, 0f);
+            mSphere = new Sphere(10,10,0.05f,1.0f);
+            mSphere.draw(mFinalMVPMatrix);
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, 0.5f);
+            mSphere = new Sphere(10,10,0.05f,1.0f);
+            mSphere.draw(mFinalMVPMatrix);
+
+            //centro
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, -0.25f, -0.25f);
+            mSphere = new Sphere(10,10,0.05f,1.0f);
+            mSphere.draw(mFinalMVPMatrix);
+
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.25f, 0.0f, -0.25f);
+            mSphere = new Sphere(10,10,0.05f,1.0f);
+            mSphere.draw(mFinalMVPMatrix);
+
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.25f, 0.0f, 0.25f);
+            mSphere = new Sphere(10,10,0.05f,1.0f);
+            mSphere.draw(mFinalMVPMatrix);
+
+            Matrix.translateM(mFinalMVPMatrix, 0, -0.25f, 0.25f, 0.0f);
+            mSphere = new Sphere(10,10,0.05f,1.0f);
+            mSphere.draw(mFinalMVPMatrix);
+
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, -0.25f, 0.25f);
+            mSphere = new Sphere(10,10,0.05f,1.0f);
+            mSphere.draw(mFinalMVPMatrix);
+
+
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, -0.25f, -0.25f);
+            mSphere = new Sphere(10,10,0.05f,1.0f);
+            mSphere.draw(mFinalMVPMatrix);
+
+
+        }else if (OPTIONS == 2){//monoclínico
             //Vertical lines
             Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, 0.0f);
             left_line = getInclinedVerticalLine(0.6f,0.5f);
@@ -427,45 +532,114 @@ public class GLRender implements GLSurfaceView.Renderer {
         }else if (OPTIONS == 3){//Hexagonal
             //Vertical lines
             Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, 0.0f);
-            left_line = getInclinedVerticalLine(0.6f,0.5f);
+            left_line = getVerticalLine(0.8f);
             left_line.draw(mFinalMVPMatrix);
             Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, 0.5f);
-            left_line_behind = getInclinedVerticalLine(0.6f,0.5f);
+            left_line_behind = getVerticalLine(0.8f);
             left_line_behind.draw(mFinalMVPMatrix);
-            Matrix.translateM(mFinalMVPMatrix, 0, 0.4f, 0.0f, 0.0f);
-            right_line = getInclinedVerticalLine(0.6f,0.5f);
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.5f, 0.0f, 0.0f);
+            right_line = getVerticalLine(0.8f);
             right_line.draw(mFinalMVPMatrix);
             Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, -0.5f);
-            right_line_behind = getInclinedVerticalLine(0.6f,0.5f);
+            right_line_behind = getVerticalLine(0.8f);
             right_line_behind.draw(mFinalMVPMatrix);
 
             //Horizontal lines
-            Matrix.translateM(mFinalMVPMatrix, 0, -0.2f, -0.3f, 0.0f);
-            bottom_line = getHorizontalLine(0.4f);
+            Matrix.translateM(mFinalMVPMatrix, 0, -0.25f, -0.4f, 0.0f);
+            bottom_line = getHorizontalLine(0.5f);
             bottom_line.draw(mFinalMVPMatrix);
             Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, 0.5f);
-            bottom_line_behind = getHorizontalLine(0.4f);
+            bottom_line_behind = getHorizontalLine(0.5f);
             bottom_line_behind.draw(mFinalMVPMatrix);
-            Matrix.translateM(mFinalMVPMatrix, 0, 0.4f, 0.6f, 0.0f);
-            top_line = getHorizontalLine(0.4f);
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.8f, 0.0f);
+            top_line = getHorizontalLine(0.5f);
             top_line.draw(mFinalMVPMatrix);
             Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, -0.5f);
-            top_line_behind = getHorizontalLine(0.4f);
+            top_line_behind = getHorizontalLine(0.5f);
             top_line_behind.draw(mFinalMVPMatrix);
 
             //Depth Lines
-            Matrix.translateM(mFinalMVPMatrix, 0, -0.2f, 0.0f, 0.25f);
+            Matrix.translateM(mFinalMVPMatrix, 0, -0.25f, 0.0f, 0.25f);
             bottom_left_line = getDepthLine(0.5f);
             bottom_left_line.draw(mFinalMVPMatrix);
-            Matrix.translateM(mFinalMVPMatrix, 0, 0.4f, 0.0f, 0.0f);
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.5f, 0.0f, 0.0f);
             bottom_right_line = getDepthLine(0.5f);
             bottom_right_line.draw(mFinalMVPMatrix);
-            Matrix.translateM(mFinalMVPMatrix, 0, -0.4f, -0.6f, 0.0f);
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, -0.8f, 0.0f);
             top_left_line = getDepthLine(0.5f);
             top_left_line.draw(mFinalMVPMatrix);
-            Matrix.translateM(mFinalMVPMatrix, 0, -0.4f, 0.0f, 0.0f);
+            Matrix.translateM(mFinalMVPMatrix, 0, -0.5f, 0.0f, 0.0f);
             top_right_line = getDepthLine(0.5f);
             top_right_line.draw(mFinalMVPMatrix);
+
+            //arriba
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, 0.25f);
+            mSphere = new Sphere(10,10,0.05f,1.0f);
+            mSphere.draw(mFinalMVPMatrix);
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, -0.5f);
+            mSphere = new Sphere(10,10,0.05f,1.0f);
+            mSphere.draw(mFinalMVPMatrix);
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.5f, 0.0f, 0.0f);
+            mSphere = new Sphere(10,10,0.05f,1.0f);
+            mSphere.draw(mFinalMVPMatrix);
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, 0.5f);
+            mSphere = new Sphere(10,10,0.05f,1.0f);
+            mSphere.draw(mFinalMVPMatrix);
+
+            //abajo
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.8f, 0.0f);
+            mSphere = new Sphere(10,10,0.05f,1.0f);
+            mSphere.draw(mFinalMVPMatrix);
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, -0.5f);
+            mSphere = new Sphere(10,10,0.05f,1.0f);
+            mSphere.draw(mFinalMVPMatrix);
+            Matrix.translateM(mFinalMVPMatrix, 0, -0.5f, 0.0f, 0f);
+            mSphere = new Sphere(10,10,0.05f,1.0f);
+            mSphere.draw(mFinalMVPMatrix);
+            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, 0.5f);
+            mSphere = new Sphere(10,10,0.05f,1.0f);
+            mSphere.draw(mFinalMVPMatrix);
+//            //Vertical lines
+//            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, 0.0f);
+//            left_line = getInclinedVerticalLine(0.6f,0.5f);
+//            left_line.draw(mFinalMVPMatrix);
+//            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, 0.5f);
+//            left_line_behind = getInclinedVerticalLine(0.6f,0.5f);
+//            left_line_behind.draw(mFinalMVPMatrix);
+//            Matrix.translateM(mFinalMVPMatrix, 0, 0.4f, 0.0f, 0.0f);
+//            right_line = getInclinedVerticalLine(0.6f,0.5f);
+//            right_line.draw(mFinalMVPMatrix);
+//            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, -0.5f);
+//            right_line_behind = getInclinedVerticalLine(0.6f,0.5f);
+//            right_line_behind.draw(mFinalMVPMatrix);
+//
+//            //Horizontal lines
+//            Matrix.translateM(mFinalMVPMatrix, 0, -0.2f, -0.3f, 0.0f);
+//            bottom_line = getHorizontalLine(0.4f);
+//            bottom_line.draw(mFinalMVPMatrix);
+//            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, 0.5f);
+//            bottom_line_behind = getHorizontalLine(0.4f);
+//            bottom_line_behind.draw(mFinalMVPMatrix);
+//            Matrix.translateM(mFinalMVPMatrix, 0, 0.4f, 0.6f, 0.0f);
+//            top_line = getHorizontalLine(0.4f);
+//            top_line.draw(mFinalMVPMatrix);
+//            Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, -0.5f);
+//            top_line_behind = getHorizontalLine(0.4f);
+//            top_line_behind.draw(mFinalMVPMatrix);
+//
+//            //Depth Lines
+//            Matrix.translateM(mFinalMVPMatrix, 0, -0.2f, 0.0f, 0.25f);
+//            bottom_left_line = getDepthLine(0.5f);
+//            bottom_left_line.draw(mFinalMVPMatrix);
+//            Matrix.translateM(mFinalMVPMatrix, 0, 0.4f, 0.0f, 0.0f);
+//            bottom_right_line = getDepthLine(0.5f);
+//            bottom_right_line.draw(mFinalMVPMatrix);
+//            Matrix.translateM(mFinalMVPMatrix, 0, -0.4f, -0.6f, 0.0f);
+//            top_left_line = getDepthLine(0.5f);
+//            top_left_line.draw(mFinalMVPMatrix);
+//            Matrix.translateM(mFinalMVPMatrix, 0, -0.4f, 0.0f, 0.0f);
+//            top_right_line = getDepthLine(0.5f);
+//            top_right_line.draw(mFinalMVPMatrix);
         }else if (OPTIONS == 4){//ortorrombica
             //Vertical lines
             Matrix.translateM(mFinalMVPMatrix, 0, 0.0f, 0.0f, 0.0f);
