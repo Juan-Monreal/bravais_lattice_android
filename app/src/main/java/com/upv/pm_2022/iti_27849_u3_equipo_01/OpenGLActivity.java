@@ -108,19 +108,19 @@ public class OpenGLActivity extends AppCompatActivity {
                 return  new CustomSurfaceView(this, size.x, size.y, 6);
 
             case "Tetragonal I":
-                return  new CustomSurfaceView(this, size.x, size.y, 6);
+                return  new CustomSurfaceView(this, size.x, size.y, 62);
 
             case "Ortorrombica P":
                 return  new CustomSurfaceView(this, size.x, size.y, 4);
 
             case "Ortorrombica I":
-                return  new CustomSurfaceView(this, size.x, size.y, 4);
+                return  new CustomSurfaceView(this, size.x, size.y, 42);
 
             case "Ortorrombica C":
-                return  new CustomSurfaceView(this, size.x, size.y, 4);
+                return  new CustomSurfaceView(this, size.x, size.y, 41);
 
             case "Ortorrombica F":
-                return  new CustomSurfaceView(this, size.x, size.y, 4);
+                return  new CustomSurfaceView(this, size.x, size.y, 43);
 
             case "Hexagonal P":
                 return  new CustomSurfaceView(this, size.x, size.y, 3);
@@ -132,7 +132,7 @@ public class OpenGLActivity extends AppCompatActivity {
                 return  new CustomSurfaceView(this, size.x, size.y, 2);
 
             case "Monoclinica C":
-                return  new CustomSurfaceView(this, size.x, size.y, 2);
+                return  new CustomSurfaceView(this, size.x, size.y, 22);
 
             case "Triclinica":
                 return  new CustomSurfaceView(this, size.x, size.y, 7);
